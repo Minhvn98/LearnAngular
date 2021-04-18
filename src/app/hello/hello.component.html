@@ -1,1 +1,7 @@
-<p>hello works!</p>
+<h1>Ối dồi ôi</h1>
+
+<ul *ngFor="let author of authors">
+  <ng-container *ngIf="author.id < 2">
+    <li>{{ author.id }} - {{ author.firstName }}</li>
+  </ng-container>
+</ul>
