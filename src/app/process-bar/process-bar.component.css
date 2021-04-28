@@ -1,0 +1,10 @@
+.process-container {
+  width: 500px;
+  height: 20px;
+  background-color: rgb(114, 112, 111);
+  overflow: hidden;
+}
+
+.process-container .process {
+  height: 20px;
+}

@@ -1,25 +1,9 @@
-<h2>{{ title }}</h2>
+<button (click)="currentProcess = currentProcess + 10">Increase Process</button>
 
+<app-process-bar></app-process-bar>
 <br />
-<button (click)="isRed = !isRed">Toggle Border Red</button>
-<br />
-<br />
-<button (click)="isGreen = !isGreen" [style.padding.px]="10">
-  Toggle Background Green
-</button>
-<br />
-<br />
-
-<div
-  class="box"
-  [class.border-red]="true"
-  [class.background-green]="true"
-></div>
-
-<!-- <div
-  class="box"
-  [class]="{
-    'border-red': isRed,
-    'background-green': isGreen
-  }"
-></div> -->
+<app-process-bar
+  [backgroundColor]="'black'"
+  [process]="currentProcess"
+  [processColor]="'green'"
+></app-process-bar>
