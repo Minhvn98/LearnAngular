@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Explore Attribute Derective!';
-
-  currentProcess = 0;
+  title = 'HelloWorld';
+  isChecked = true;
 }
