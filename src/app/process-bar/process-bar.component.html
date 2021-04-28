@@ -1,0 +1,11 @@
+<h1>Process bar</h1>
+
+<div class="process-container" [style.background-color]="backgroundColor">
+  <div
+    class="process"
+    [style]="{
+      backgroundColor: processColor,
+      width: process + '%'
+    }"
+  ></div>
+</div>

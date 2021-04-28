@@ -1,18 +1,14 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
+import { ToggleComponent } from './toggle.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HelloComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, ToggleComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
