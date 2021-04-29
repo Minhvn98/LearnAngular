@@ -3,13 +3,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'toggle',
   template: `
+    <div>
+      <ng-content select=".toggle-header"></ng-content>
+    </div>
     <div
       class="toggle-wrapper"
       [class.checked]="checked"
       tabindex="0"
-      (click)="checkedChange.emit(!checked)"
+      (click)="toggle()"
     >
       <div class="toggle"></div>
+    </div>
+    <div>
+      <ng-content select=".toggle-content"></ng-content>
     </div>
   `,
 
@@ -71,4 +77,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ToggleComponent {
   @Input() checked!: boolean;
   @Output() checkedChange = new EventEmitter<boolean>();
+
+  toggle() {
+    this.checkedChange.emit(!this.checked);
+  }
 }
