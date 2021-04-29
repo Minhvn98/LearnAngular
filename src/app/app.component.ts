@@ -9,10 +9,4 @@ import { ToggleComponent } from './toggle.component';
 export class AppComponent {
   title = 'HelloWorld';
   isChecked = true;
-
-  @ViewChild('toggleComp') toggleComp!: ToggleComponent;
-
-  ngAfterViewInit() {
-    console.log(this.toggleComp);
-  }
 }

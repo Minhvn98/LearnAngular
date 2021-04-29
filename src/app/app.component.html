@@ -2,7 +2,10 @@
 <br />
 <input type="text" [(ngModel)]="title" />
 
-<toggle #toggleComp [(checked)]="isChecked"></toggle>
-
-<br />
-<button (click)="toggleComp.toggle()">Toggle</button>
+<toggle [(checked)]="isChecked">
+  <p class="toggle-content">Đây là content</p>
+  <h1 class="toggle-header">day la header</h1>
+</toggle>
+<toggle [(checked)]="isChecked"></toggle>
+<toggle [(checked)]="isChecked"></toggle>
+<toggle [(checked)]="isChecked"></toggle>
