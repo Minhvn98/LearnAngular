@@ -2,4 +2,7 @@
 <br />
 <input type="text" [(ngModel)]="title" />
 
-<toggle [(checked)]="isChecked"></toggle>
+<toggle #toggleComp [(checked)]="isChecked"></toggle>
+
+<br />
+<button (click)="toggleComp.toggle()">Toggle</button>
